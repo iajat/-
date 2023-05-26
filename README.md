@@ -3,7 +3,8 @@
 selectClass -- Vue.js
 
 后端：（后端不是我写的，和我一起合作的人写的）----我只会一点点spring-boot,嘿嘿
-https://github.com/Daren-star/sscm   ---汤达人
+
+https://github.com/Daren-star/sscm   
 
 
 ## 项目简介
@@ -50,26 +51,29 @@ Copy code
 npm install
 启动开发服务器：
 
-bash
-Copy code
-npm run serve
-访问 http://localhost:8080 即可开始使用系统。
+## 项目结构
 
-项目结构
-css
-Copy code
+```plaintext
 selectClass--vue/
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── router/
-│   ├── services/
-│   ├── views/
-│   ├── App.vue
-│   └── main.js
-├── screenshot.png           项目截图
-└── README.md                项目文档
-注意事项
-该项目为示例项目，仅包含基本的功能和样式，未考虑实际数据和后端服务。
-在实际项目中使用前，请根据实际需求进行适当的修改和扩展。
+├── public/                 # 公共资源目录
+├── src/                    # 源代码目录
+│   ├── assets/             # 静态资源
+│   ├── components/         # 组件
+│   ├── router/             # 路由配置
+│   ├── services/           # 服务（API 请求等）
+│   ├── views/              # 视图组件
+│   ├── App.vue             # 根组件
+│   └── main.js             # 入口文件
+├── screenshot.png           # 项目截图
+└── README.md                # 项目文档
+
+
+public/：存放公共资源文件的目录，如 HTML 模板、图片等。
+src/：项目的源代码目录。
+assets/：存放静态资源，如图片、样式表等。
+components/：包含各种可复用的组件。
+router/：存放路由相关的配置文件。
+services/：提供服务的模块，如 API 请求等。
+views/：存放视图组件，每个组件对应一个页面。
+App.vue：根组件，作为应用的主入口。
+main.js：应用的入口文件，用于初始化 Vue 实例和加载所需的插件等。
