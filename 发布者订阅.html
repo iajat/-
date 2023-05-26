@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id = 'btn'>12</button>
+
+    <script>
+        const obj = {}
+
+        function on(id,f){
+            if(!obj[id]){
+                obj[id]=[]
+            }
+            obj[id].push(f)
+        }
+
+        function emit(id,msg){
+            obj[id].forEach(element => {
+                element(msg)
+            });
+        }
+
+        on('hhh',(msg)=>{console.log(msg);})
+
+        document.getElementById('btn').addEventListener('click',()=>{
+            emit('hhh','触发了')
+        })
+    </script>
+</body>
+</html>
